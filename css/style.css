@@ -1,0 +1,1058 @@
+:root {
+    --yellow: #f9d808;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 0.6rem 0.9rem rgba(0, 0, 0, 0.2);
+    --grey: #eee;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Segoe UI",
+        "Helvetica Neue", arial, sans-serif;
+}
+
+html {
+    color: var(--black);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+.yellow {
+    color: #f9d808;
+    font-weight: bold;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+/* header start */
+
+.header {
+    padding: 1rem 7vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    z-index: 10;
+}
+
+#showNav,
+#closeNav {
+    display: none;
+}
+
+#showNav:checked~.header-nav {
+    transform: scale(1);
+}
+
+#showNav:checked~.navBar {
+    display: none;
+}
+
+#closeNav:checked~.header-nav {
+    transform: scale(0);
+}
+
+#closeNav:checked~.navX {
+    display: none;
+}
+
+.navBar,
+.navX,
+.loginUser {
+    font-size: 22px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.navBar:hover,
+.navX:hover,
+.loginUser:hover {
+    background-color: var(--yellow);
+}
+
+.logo a {
+    font-weight: bold;
+    color: var(--black);
+    font-size: 20px;
+    padding: 0.5em;
+}
+
+.header-nav {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--black);
+    transform-origin: center top;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.header-nav a {
+    padding: 0.75em 0.5rem;
+    color: var(--black);
+    font-weight: bold;
+    background-color: white;
+    transition: background 0.5s;
+}
+
+.header-nav a~a {
+    border-top: 1px solid var(--black);
+}
+
+.header-nav a:hover {
+    background-color: var(--yellow);
+}
+
+#active {
+    background-color: var(--yellow);
+}
+
+#showLogin,
+#closeLogin {
+    display: none;
+}
+
+#showLogin:checked~.loginPanel {
+    transform: scale(1);
+}
+
+#closeLogin:checked~.loginPanel {
+    transform: scale(0);
+}
+
+.loginBtn {
+    display: none;
+}
+
+.loginPanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform-origin: center top;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.loginX {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(24px + 1vw);
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.loginX:hover {
+    color: red;
+}
+
+.loginForm {
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    width: calc(250px + 10vw);
+}
+
+.formTitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.inputContainer input {
+    padding: 1em;
+    width: 100%;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.inputContainer input:focus~i {
+    color: var(--light-yellow);
+}
+
+.inputContainer i {
+    border: 1px solid grey;
+    border-radius: 0.25rem 0 0 0.25rem;
+    transition: color 0.5s;
+    width: 48.64px;
+    height: 48.64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.newPass {
+    text-align: center;
+}
+
+.loginForm input[type=submit] {
+    padding: 0.5em;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: var(--light-color);
+    background-color: var(--light-yellow);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.loginForm input[type=submit]:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.alternativeLogin {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.alternativeLogin p {
+    grid-column: 1 / 3;
+}
+
+.alternativeLogin a:not(a:last-child) {
+    background-color: var(--light-yellow);
+    border-radius: 0.25rem;
+    padding: 12px 0;
+    color: var(--light-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.alternativeLogin a:not(a:last-child):hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+/* header end */
+
+/* main start */
+
+.main {
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+}
+
+/* home start */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 7vw 0;
+    width: 100%;
+    height: auto;
+}
+
+.home h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+
+.home img {
+    width: 100%;
+    height: auto;
+}
+
+.home a {
+    background-color: var(--light-yellow);
+    font-weight: bold;
+    padding: 0.75em 2em;
+    border-radius: 0.25rem;
+    color: var(--light-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.home a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* home end */
+
+/* achievements start */
+
+.achievements {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    background-color: #eee;
+    padding: 3rem 7vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.achievement-item {
+    width: 100%;
+    height: auto;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.achievement-item:hover {
+    background-color: var(--black);
+    color: white;
+}
+
+.achievement-item div {
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-item div i {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+    color: var(--black);
+    border-radius: 50%;
+    transition: background-color 0.5s;
+}
+
+.achievement-item:hover div i {
+    background-color: #f9d808;
+    transition: background-color 0.5s;
+}
+
+.achievement-item .yellow {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.achievement-item:hover .yellow {
+    color: white;
+}
+
+/* achievements end*/
+
+/* vehicles start */
+
+.vehicles {
+    margin-top: 2rem;
+    padding: 0 7vw;
+    width: 100%;
+    height: auto;
+}
+
+.vehicles h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2em;
+}
+
+.js .vehicle-swiper {
+    cursor: grab;
+}
+
+.no-js .vehicle-swiper {
+    overflow: visible;
+}
+
+.js .vehicle-swiper .swiper-wrapper {
+    padding-bottom: 2.5rem;
+}
+
+.no-js .vehicle-swiper .swiper-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.vehicle-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.js .vehicle-swiper .swiper-slide {
+    transform: scale(0.6) !important;
+    transition: transform 0.5s;
+}
+
+.no-js .vehicle-swiper .swiper-slide {
+    border: 1px solid var(--grey);
+    border-radius: 0.25rem;
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.js .vehicle-swiper .swiper-slide-active {
+    transform: scale(1) !important;
+}
+
+.vehicle-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.js .vehicle-swiper .swiper-slide img {
+    filter: brightness(0.3);
+    transition: filter 0.5s;
+}
+
+.no-js .vehicle-swiper .swiper-slide img {
+    transform: scale(0.7);
+    transition: transform 0.5s;
+}
+
+.no-js .vehicle-swiper .swiper-slide:hover img {
+    transform: scale(0.9);
+}
+
+.js .vehicle-swiper .swiper-slide-active img {
+    filter: brightness(1);
+}
+
+.js .vehicle-swiper .swiper-slide h3,
+.js .vehicle-swiper .swiper-slide p,
+.js .vehicle-swiper .swiper-slide button {
+    transform: scale(0);
+    transform-origin: center top;
+    transition: transform 0.5s;
+}
+
+.js .vehicle-swiper .swiper-slide-active h3,
+.js .vehicle-swiper .swiper-slide-active p,
+.js .vehicle-swiper .swiper-slide-active button {
+    transform: scale(1);
+}
+
+.vehicle-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--grey);
+}
+
+.vehicle-info p::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.vehicle-swiper .swiper-slide button {
+    background-color: #ffee80;
+    font-size: 16px;
+    padding: 0.75em 2em;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.vehicle-swiper .swiper-slide button:hover {
+    background-color: var(--yellow);
+    transition: background-color 0.5s;
+}
+
+.js .vehicle-navigation {
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 50%;
+    padding: 2rem;
+    transform: scale(0.7);
+    color: var(--yellow);
+    display: none;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.js .vehicle-navigation:hover {
+    opacity: 1;
+    transform: scale(0.8)
+}
+
+.js .vehicle-pagination .swiper-pagination-bullet {
+    transition: transform 0.5s;
+}
+
+.js .vehicle-pagination .swiper-pagination-bullet-active {
+    background-color: #f9d808;
+    transform: scale(1.5);
+}
+
+/* vehicles end */
+
+/* services start */
+
+.services {
+    margin-top: 2rem;
+    padding: 0 7vw;
+    width: 100%;
+    height: auto;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2em;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 1rem;
+}
+
+.services-item {
+    border: 1px solid var(--grey);
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.services-item:hover {
+    background-color: var(--black);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.services-item div {
+    color: var(--black);
+    background-color: var(--yellow);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.services-item p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.services-item p:nth-of-type(2) {
+    color: var(--light-color);
+    transition: color 0.5s;
+}
+
+.services-item:hover p:nth-of-type(2) {
+    color: white;
+    transition: color 0.5s;
+}
+
+.services-item button {
+    background-color: var(--light-yellow);
+    border-radius: 0.25rem;
+    padding: 0.75em 2em;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--light-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.services-item button:hover {
+    color: var(--black);
+    background-color: var(--yellow);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* services end */
+
+/* featured start */
+
+.featured {
+    padding: 0 7vw;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.js .featured .swiper .swiper-wrapper {
+    margin-bottom: 2.5rem;
+    cursor: grab;
+}
+
+.no-js .featured .swiper .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.no-js .featured-swiper1 {
+    padding-bottom: 1rem;
+}
+
+.featured-swiper2 {
+    margin-top: 1rem;
+}
+
+.featured .swiper-slide {
+    border: 1px solid var(--grey);
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.featured .swiper-slide img {
+    width: 70%;
+    height: auto;
+    transform: scale(0.8);
+    transition: transform 0.5s;
+}
+
+.featured .swiper-slide:hover img {
+    transform: scale(1);
+}
+
+.featured .swiper-slide p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.estrelas i {
+    color: orange;
+}
+
+.featured .swiper-slide p:nth-of-type(2) {
+    font-size: 1.3rem;
+}
+
+.featured .swiper-slide button {
+    background-color: var(--light-yellow);
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.featured .swiper-slide button:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.js .featured-pagination .swiper-pagination-bullet {
+    transition: transform 0.5s;
+}
+
+.js .featured-pagination .swiper-pagination-bullet-active {
+    background-color: var(--yellow);
+    transform: scale(1.5);
+}
+
+/* featured end */
+
+/* subscribe start */
+
+.subscribe {
+    padding: 7rem 7vw;
+    text-align: center;
+    background-image: url(/img/letter-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.subscribe h2 {
+    font-size: 2rem;
+}
+
+.subscribe form {
+    display: flex;
+    width: 100%;
+}
+
+.subscribe form input[type=email],
+.subscribe form input[type=submit] {
+    border: 1px solid var(--grey);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.subscribe form input[type=email] {
+    border-radius: 2rem 0 0 2rem;
+    border-right: none;
+    width: 100%;
+}
+
+.subscribe form input[type=submit] {
+    border-radius: 0 2rem 2rem 0;
+    border-left: none;
+    padding: 1rem;
+    background-color: var(--light-yellow);
+    color: var(--light-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.subscribe form input[type=submit]:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+/* subscribe end */
+
+/* review start*/
+
+.review {
+    margin-top: 2rem;
+    padding: 0 7vw;
+    width: 100%;
+    height: auto;
+}
+
+.review h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.js .review .swiper-wrapper {
+    margin-bottom: 2rem;
+}
+
+.no-js .review .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.review .swiper-slide {
+    border: 1px solid var(--grey);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: grab;
+}
+
+.review .swiper-slide img {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+}
+
+.review .swiper-slide p:nth-of-type(1) {
+    color: grey;
+}
+
+.review .swiper-slide p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.js .review-pagination .swiper-pagination-bullet {
+    transition: transform 0.5s;
+}
+
+.js .review-pagination .swiper-pagination-bullet-active {
+    background-color: var(--yellow);
+    transform: scale(1.5);
+}
+
+/* review end */
+
+/* contact start */
+
+.contact {
+    margin-top: 2rem;
+    padding: 0 7vw;
+    width: 100%;
+    height: auto;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.map {
+    border: 1px solid var(--grey);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-container form p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.contact-container form input:not(input:last-child),
+.contact-container form textarea {
+    border: 1px solid var(--grey);
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.contact-container form input:not(input:last-child):focus,
+.contact-container form textarea:focus {
+    border: 1px solid var(--light-color);
+}
+
+.contact-container form textarea {
+    resize: none;
+}
+
+.contact-container form input[type=submit] {
+    background-color: var(--light-yellow);
+    color: var(--light-color);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.contact-container form input[type=submit]:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+/* contact end */
+
+/* main end */
+
+/* footer start */
+
+.footer {
+    margin-top: 2rem;
+    background-color: var(--light-yellow);
+    padding: 2rem 7vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-item,
+.footer-item a {
+    color: var(--light-color);
+    transition: color 0.5s;
+}
+
+.footer-item:hover,
+.footer-item a:hover {
+    color: var(--black);
+}
+
+.footer-item:hover span {
+    font-weight: bold;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid var(--light-color);
+    padding-top: 1rem;
+}
+
+/* footer end */
+
+@media (min-width:800px) {
+
+    .header {
+        gap: 1rem;
+    }
+
+    .navBar,
+    .navX {
+        display: none;
+    }
+
+    #closeNav:checked~.header-nav {
+        transform: none;
+    }
+
+    .header-nav {
+        position: relative;
+        flex-direction: row;
+        border-bottom: none;
+        /* gap: 0.25rem; */
+        justify-content: space-evenly;
+    }
+
+    .header-nav a {
+        border-radius: 0.25rem;
+    }
+
+    .header-nav a~a {
+        border-top: none;
+    }
+
+    .loginUser {
+        display: none;
+    }
+
+    .loginBtn {
+        display: block;
+        padding: 12px 1rem;
+        background-color: var(--light-yellow);
+        color: var(--light-color);
+        border-radius: 0.25rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .loginBtn:hover {
+        background-color: var(--yellow);
+        color: var(--black);
+        transition: background-color 0.5s, color 0.5s;
+    }
+
+    .no-js .vehicle-swiper .swiper-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    }
+
+    .js .vehicle-navigation {
+        display: flex;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    }
+
+    .subscribe form {
+        width: 688px;
+    }
+
+    .no-js .review .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+        gap: 1rem;
+    }
+}

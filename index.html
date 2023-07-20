@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de vendas de carros de última geração">
+    <title>Max Wheels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <input type="radio" name="nav" id="showNav">
+        <input type="radio" name="nav" id="closeNav" checked>
+
+        <label for="showNav" class="navBar"><i class="fa-solid fa-bars"></i></label>
+        <label for="closeNav" class="navX"><i class="fa-solid fa-xmark"></i></label>
+
+        <div class="logo">
+            <a href="#"><span class="yellow">Max</span>Wheels</a>
+        </div>
+
+        <nav class="header-nav">
+            <a href="#home" class="homee">Home</a>
+            <a href="#vehicles" class="vehicless">Vehicles</a>
+            <a href="#services" class="servicess">Services</a>
+            <a href="#featured" class="featuredd">Featured</a>
+            <a href="#reviews" class="reviewss">Reviews</a>
+            <a href="#contact" class="contactt">Contact</a>
+        </nav>
+
+        <input type="radio" name="login" id="showLogin">
+        <input type="radio" name="login" id="closeLogin" checked>
+
+        <label for="showLogin" class="loginUser"><i class="fa-solid fa-user"></i></label>
+        <label for="showLogin" class="loginBtn">Login</label>
+
+        <div class="loginPanel">
+            <label for="closeLogin" class="loginX"><i class="fa-solid fa-xmark"></i></label>
+
+            <form action="#" method="post" class="loginForm">
+                <p class="formTitle">User login</p>
+                <div class="inputContainer">
+                    <input type="email" name="email" placeholder="email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="inputContainer">
+                    <input type="password" name="password" placeholder="password">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <p class="newPass">Forgot your password? <a href="#" class="link">Click here</a></p>
+
+                <input type="submit" value="login">
+
+                <div class="alternativeLogin">
+                    <p>Or login with</p>
+                    <a href="#">Google</a>
+                    <a href="#">Facebook</a>
+                    <p>Don't have an account? <a href="#" class="link">Create one</a></p>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="home" id="home">
+            <h1>Find your car</h1>
+            <picture>
+                <source media="(max-width: 520px)" srcset="img/home-img-mobile.png" type="image/jpg" />
+                <source media="(max-width: 800px)" srcset="img/home-img-tablet.png" type="image/jpg" />
+                <img src="img/home-img-desktop.png" alt="Três carros juntos">
+            </picture>
+            <a href="#">Explore cars</a>
+        </section>
+
+        <section class="achievements">
+            <div class="achievement-item">
+                <div><i class="fa-solid fa-house"></i></div>
+                <p class="yellow">150+</p>
+                <p>Branches</p>
+            </div>
+
+            <div class="achievement-item">
+                <div><i class="fa-solid fa-dollar-sign"></i></div>
+                <p class="yellow">4770+</p>
+                <p>Cars sold</p>
+            </div>
+
+            <div class="achievement-item">
+                <div><i class="fa-solid fa-users"></i></div>
+                <p class="yellow">320+</p>
+                <p>Happy clients</p>
+            </div>
+
+            <div class="achievement-item">
+                <div><i class="fa-solid fa-car"></i></div>
+                <p class="yellow">1500+</p>
+                <p>New cars</p>
+            </div>
+        </section>
+
+        <section class="vehicles" id="vehicles">
+            <h2>Popular <span class="yellow">vehicles</span></h2>
+
+            <div class="swiper vehicle-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-1.png" alt="carro vermelho" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-2.png" alt="carro cinza" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-3.png" alt="carro branco" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-4.png" alt="carro amarelo" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-5.png" alt="carro preto" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="img/vehicle-6.png" alt="carro cinza" width="656" height="360" loading="lazy">
+                        <h3>New model</h3>
+                        <p>Price: <span class="yellow">$62,000/-</span></p>
+                        <div class="vehicle-info">
+                            <p>new</p>
+                            <p>2023</p>
+                            <p>Automatic</p>
+                            <p>Petrol</p>
+                            <p>183mph</p>
+                        </div>
+                        <button>Check out</button>
+                    </div>
+                </div>
+                <div class="swiper-button-next vehicle-navigation"></div>
+                <div class="swiper-button-prev vehicle-navigation"></div>
+                <div class="swiper-pagination vehicle-pagination"></div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our <span class="yellow">services</span></h2>
+
+            <div class="services-container">
+                <div class="services-item">
+                    <div><i class="fa-solid fa-car"></i></div>
+                    <p>Car selling</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+
+                <div class="services-item">
+                    <div><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <p>Parts repair</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+
+                <div class="services-item">
+                    <div><i class="fa-solid fa-car-burst"></i></div>
+                    <p>Car insurance</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+
+                <div class="services-item">
+                    <div><i class="fa-solid fa-car-battery"></i></div>
+                    <p>Battery replacemente</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+
+                <div class="services-item">
+                    <div><i class="fa-solid fa-gas-pump"></i></div>
+                    <p>Oil change</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+
+                <div class="services-item">
+                    <div><i class="fa-solid fa-headset"></i></div>
+                    <p>24/7 support</p>
+                    <p>Lorem ipsum dolor sit amet consettetur adipiscing elit. Corporis, nisi.</p>
+                    <button>Read more</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured" id="featured">
+            <h2><span class="yellow">Featured</span> cars</h2>
+
+            <div class="swiper featured-swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <img src="/img/car-1.png" alt="carro azul" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-2.png" alt="carro branco" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-3.png" alt="carro laranja" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-4.png" alt="carro azul" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination featured-pagination featured-pagination1"></div>
+            </div>
+
+            <div class="swiper featured-swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <img src="/img/car-5.png" alt="carro vermelho" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-6.png" alt="carro branco" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-7.png" alt="carro turquesa" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+
+                    <div class="swiper-slide ">
+                        <img src="/img/car-8.png" alt="carro branco" width="300" height="175" loading="lazy">
+                        <p>New model</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <p>$55,000/-</p>
+                        <button>check out</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination featured-pagination featured-pagination2"></div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <h2>Subscribe for latest updates</h2>
+            <p>lorem ipsum dolor sit amet consectetur adipiscing elit, voluscping.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="enter your email">
+                <input type="submit" value="subscribe">
+            </form>
+        </section>
+
+        <section class="review" id="reviews">
+            <h2>Client's <span class="yellow">review</span></h2>
+
+            <div class="swiper review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/pic-1.jpg" alt="homem loiro olhando para o lado e sorrindo" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/img/pic-2.jpg" alt="mulher loira usando touca de frio e sorrindo" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/img/pic-3.jpg" alt="homem com rosto serio" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/img/pic-4.jpg" alt="mulher com cabelo loiro sorrindo" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/img/pic-5.jpg" alt="homem olhando pra cima e usando óculos de sol" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/img/pic-6.jpg" alt="mulher olhando para o lado" width="193" height="190" loading="lazy">
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis,
+                            mais bolis eu num gostis.Quem manda na minha terra sou euzis!Interagi no mé, cursus quis,
+                            vehicula ac nisi.Atirei o pau no gatis, per gatis num morreus.</p>
+                        <p>John deo</p>
+                        <div class="estrelas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination review-pagination"></div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2><span class="yellow">Contact</span> us</h2>
+            <div class="contact-container">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1990.4354811964554!2d-38.5829983461244!3d-3.837864789064732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1689602458388!5m2!1spt-BR!2sbr"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <form action="#" method="post">
+                    <p>get in touch</p>
+                    <input type="text" name="name" placeholder="your name">
+                    <input type="email" name="email" placeholder="your email">
+                    <input type="text" name="subject" placeholder="your subject">
+                    <textarea name="text" cols="30" rows="10" placeholder="your message"></textarea>
+                    <input type="submit" value="Send message">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-container">
+                <h2>Our branches</h2>
+                <a href="#" class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>India</span></a>
+                <a href="#" class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>Japan</span></a>
+                <a href="#" class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>France</span></a>
+                <a href="#" class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>Russia</span></a>
+                <a href="#" class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>USA</span></a>
+            </div>
+
+            <nav class="footer-container">
+                <h2>Quick links</h2>
+                <a href="#home" class="footer-item"><i class="fa-solid fa-arrow-right"></i> <span>Home</span></a>
+                <a href="#vehicles" class="footer-item"><i class="fa-solid fa-arrow-right"></i>
+                    <span>Vehicles</span></a>
+                <a href="#services" class="footer-item"><i class="fa-solid fa-arrow-right"></i>
+                    <span>Services</span></a>
+                <a href="#featured" class="footer-item"><i class="fa-solid fa-arrow-right"></i>
+                    <span>Featured</span></a>
+                <a href="#reviews" class="footer-item"><i class="fa-solid fa-arrow-right"></i> <span>Reviews</span></a>
+                <a href="#contact" class="footer-item"><i class="fa-solid fa-arrow-right"></i> <span>Contact</span></a>
+            </nav>
+
+            <div class="footer-container">
+                <h2>Contact info</h2>
+                <address class="footer-item"><i class="fa-solid fa-phone"></i> <span>(85)91234-5678</span></address>
+                <address class="footer-item"><i class="fa-solid fa-phone"></i> <span>(85)91355-8893</span></address>
+                <address class="footer-item"><i class="fa-solid fa-envelope"></i> <span>Dev@outlook.com</span></address>
+                <p class="footer-item"><i class="fa-solid fa-location-dot"></i> <span>Fortaleza-Brasil</span></p>
+            </div>
+
+            <div class="footer-container">
+                <h2>Contact info</h2>
+                <address class="footer-item"><a href="#"><i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span></a></address>
+                <address class="footer-item"><a href="#"><i class="fa-brands fa-linkedin"></i> <span>Linkedin</span></a>
+                </address>
+                <address class="footer-item"><a href="#"><i class="fa-brands fa-github"></i> <span>Github</span></a>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Created by <span><a href="#">Jr.dev</a></span> | All rights reserved</p>
+        </div>
+
+    </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/37ba8401b1.js" crossorigin="anonymous" async></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
